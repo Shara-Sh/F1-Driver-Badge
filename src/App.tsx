@@ -7,18 +7,18 @@ function App() {
   const [name, setName] = useState("F1");
   const [color, setColor] = useState("#e8002d");
 
-  const onNumberChange = (e: React.FormEvent<HTMLInputElement>) => {
+  const onNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const numberValue = parseInt(e.target.value);
     const clampedValue = Math.max(0, Math.min(99, numberValue));
     setNumber(clampedValue);
   };
 
-  const onNameChange = (e: React.FormEvent<HTMLInputElement>) => {
+  const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const nameValue = e.target.value.toUpperCase().slice(0, 3);
     setName(nameValue);
   };
 
-  const onColorChange = (e: React.FormEvent<HTMLInputElement>) => {
+  const onColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setColor(e.target.value);
   };
 
